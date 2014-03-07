@@ -1,0 +1,301 @@
+html {
+	background-color: #fff;
+	font-size: 14px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+}
+
+/* Page Formatting */
+
+.container {
+	padding: 0px;
+}
+
+header {
+	margin: 10px;
+}
+
+.row-shift-up {
+	margin-top: -158px;
+}
+
+.column-under-map {
+	padding-left: 0px;
+}
+
+.column-left-map {
+	text-align: right;
+	padding-right: 30px;
+}
+
+.row:last-child {
+	margin-bottom: 50px;
+}
+
+/* Map Formatting */
+
+#map-container {
+	height: 528px;
+ 	background-size: contain;
+}
+
+#counties {
+	width: 100%;
+	height: 100%;
+}
+
+#streams {
+	width: 100%;
+	height: 100%;
+}
+
+#counties.active {
+	background: url(../images/counties.gif) no-repeat top left;
+ 	background-size: contain;
+}
+
+#streams.active {
+	background: url(../images/streams.gif) no-repeat top left;
+ 	background-size: contain;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 300;
+	text-align: right; }
+
+h2#year {
+	font-size: 4.6em;
+	font-weight: 700;
+	margin: 0; }
+
+a {
+	text-decoration: none;
+	color: black; }
+
+a:hover {
+	color: gray; }
+
+.paragraph {
+	margin-bottom: 10px;
+	padding-left: 35px;
+	font-size: 13px; 
+}
+
+.results {
+	font-size: 14px;
+}
+
+.slider {
+ 	margin-top: 20px;
+}
+
+#wells-slider {
+	margin: 0 16px 0 10px;
+}
+
+.ticks {
+	background: url(../images/ticks.png) no-repeat top left;
+	background-size: 100%;
+	height: 50px;
+}
+
+.bars-container {
+	margin-top: -12px;
+}
+
+.bars-container div {
+	margin: 12px 0 12px 0;
+}
+
+.bar {
+	height: 18px;
+	width: 0px;
+	border-radius: 4px;
+}
+
+#wells-bar-graph {
+	background-color: #bbb;
+}
+
+#irri-bar-graph {
+	background-color: #1c9099;
+}
+
+#domestic-bar-graph {
+	background-color: #67a9cf;
+}
+
+#livestock-bar-graph {
+	background-color: #016c59;
+}
+
+#switch-container {
+	color: #D3D3D3;
+	padding-left: 0px;
+}
+
+#switch-container span {
+	padding-right: 12px;
+}
+
+#switch-container span.on {
+	color: #393939;
+}
+
+#switch-container .switch:hover {
+	color: #393939;
+	cursor: pointer;
+}
+
+.y1900s { background: url(../images/wells/NE-wells-1900s.gif) no-repeat top left; }
+.y1905s { background: url(../images/wells/NE-wells-1905s.gif) no-repeat top left; }
+.y1910s { background: url(../images/wells/NE-wells-1910s.gif) no-repeat top left; }
+.y1915s { background: url(../images/wells/NE-wells-1915s.gif) no-repeat top left; }
+.y1920s { background: url(../images/wells/NE-wells-1920s.gif) no-repeat top left; }
+.y1925s { background: url(../images/wells/NE-wells-1925s.gif) no-repeat top left; }
+.y1930s { background: url(../images/wells/NE-wells-1930s.gif) no-repeat top left; }
+.y1935s { background: url(../images/wells/NE-wells-1935s.gif) no-repeat top left; }
+.y1940s { background: url(../images/wells/NE-wells-1940s.gif) no-repeat top left; }
+.y1945s { background: url(../images/wells/NE-wells-1945s.gif) no-repeat top left; }
+.y1950s { background: url(../images/wells/NE-wells-1950s.gif) no-repeat top left; }
+.y1955s { background: url(../images/wells/NE-wells-1955s.gif) no-repeat top left; }
+.y1960s { background: url(../images/wells/NE-wells-1960s.gif) no-repeat top left; }
+.y1965s { background: url(../images/wells/NE-wells-1965s.gif) no-repeat top left; }
+.y1970s { background: url(../images/wells/NE-wells-1970s.gif) no-repeat top left; }
+.y1975s { background: url(../images/wells/NE-wells-1975s.gif) no-repeat top left; }
+.y1980s { background: url(../images/wells/NE-wells-1980s.gif) no-repeat top left; }
+.y1985s { background: url(../images/wells/NE-wells-1985s.gif) no-repeat top left; }
+.y1990s { background: url(../images/wells/NE-wells-1990s.gif) no-repeat top left; }
+.y1995s { background: url(../images/wells/NE-wells-1995s.gif) no-repeat top left; }
+.y2000s { background: url(../images/wells/NE-wells-2000s.gif) no-repeat top left; }
+.y2005s { background: url(../images/wells/NE-wells-2005s.gif) no-repeat top left; }
+.y2010s { background: url(../images/wells/NE-wells-2010s.gif) no-repeat top left; }
+.today  { background: url(../images/wells/NE-wells-today.gif) no-repeat top left; }
+
+footer {
+	font-size: .8em;
+	text-align: right;
+}
+
+footer p {
+	margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+	.container {
+		padding: 0 15px 15px 15px;
+	}
+	header {
+		margin: 5px;
+	}
+	#map-container {
+		height: 352px;
+	}
+	h2#year {
+		font-size: 3.0em;
+	}
+	.row-shift-up {
+		margin-top: 0px;
+	}
+	.column-under-map {
+		padding-left: 15px;
+	}
+	.column-left-map {
+		text-align: right;
+		padding-right: 15px;
+	}
+	.ticks {
+		height: 30px;
+	}
+	#wells-slider {
+		margin: 0 8px 0 4px;
+	}
+	#switch-container {
+		padding-left: 15px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#map-container {
+		height: 352px;
+	}
+	h1 { font-size: 1.6em }
+	h2#year {
+		font-size: 3.0em;
+	}
+	.row-shift-up {
+		margin-top: -120px;
+	}
+	.column-under-map {
+		padding-left: 15px;
+	}
+	.column-left-map {
+		text-align: right;
+		padding-right: 15px;
+	}
+	.paragraph {
+		font-size: 11px; 
+		margin-bottom: 0px;
+	}
+	.results {
+		font-size: 11px;
+	}
+	.ticks {
+		height: 35px;
+	}
+	#wells-slider {
+		margin: 0 10px 0 6px;
+	}
+	#switch-container {
+		margin-top: 140px;
+		padding-left: 20px;
+	}
+	.bars-container {
+		margin-top: -8px;
+		margin-bottom: 18px;
+	}
+	.bars-container div {
+		margin: 10px 0 10px 0;
+	}
+	.bar {
+		height: 14px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	#map-container {
+		height: 452px;
+	}
+	h2#year {
+		font-size: 3.8em;
+	}
+	.row-shift-up {
+		margin-top: -144px;
+	}
+	.paragraph {
+		font-size: 12px; 
+		margin-bottom: 0px;
+	}
+	.results {
+		font-size: 12px;
+	}
+	#wells-slider {
+		margin: 0 14px 0 10px;
+	}
+	.bars-container {
+		margin-top: -8px;
+		margin-bottom: 8px;
+	}
+	.bars-container div {
+		margin: 10px 0 10px 0;
+	}
+	.bar {
+		height: 16px;
+	}
+}
+@media (min-width: 1200px) {
+
+}
