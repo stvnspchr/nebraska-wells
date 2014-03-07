@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css">
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 
 		<script src="js/jquery-1.10.2.js"></script>
 		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
@@ -31,36 +32,53 @@
   	</head>
   
 	<body>
-		<div class="container">
+		<div class="lead-div container-fluid" data-top="opacity:1;transform: translateY(0px)" data--400-top="opacity:0;transform: translateY(-400px)">
+			<div class="row">
+				<div class="col-xs-12 lead-image">
+				  	<div class="lead-container">
+				  		<h1 class="lead-title lead-shadow">Nebraska Groundwater</h1>
+				  		<p class="lead-copy lead-shadow">A timelapse of groundwater well production in the heart of the Great Plains</p>
+				  		<p class="lead-author lead-shadow">By the PBT Team</p>
+				  		<p class="lead-date lead-shadow">August 22nd 2014</p>
+				  		
+					</div>
+					<div class="lead-scroll-container">
+						<p class="lead-scroll lead-shadow">SCROLL</p>
+						<p class="lead scroll lead-shadow"><span class="lead-scroll-arrow glyphicon glyphicon-chevron-down"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="interactive-map-div container">
 	
+<!-- 
 			<header class="row">
-				  <div class="col-sm-6">
+				  <div class="col-sm-8">
 				  		<h1>Nebraska Groundwater Wells</h1>
 				  </div>
-			</header>
 
+			</header>
+ -->
+			
+			<div class="row">
+				<div class="col-xs-12 visible-xs paragraph">
+					<p>Nebraska draws the most groundwater of any state in the country. Originally developed here, the center pivot is the iconic image of groundwater use. The deepest portion of the vast Ogallala Aquifer is below the Nebraska Sandhills, providing water for large scale ranching operations.</p>
+				</div>
+			</div>
+			
 			<div class="interactive row">
-				<div id="counties" class="active">
+				<div id="counties" class="col-xs-12 active">
 					<div id="streams" class="">
 						<div id="map-container" class=""></div>
 					</div>
 				</div>
 			</div>
-			
+		
 			<div class="row row-shift-up">
-				<div class="col-sm-3 column-left-map paragraph">
+				<div class="col-sm-3 visible-sm visible-md visible-lg column-left-map paragraph">
 					<p>Nebraska draws the most groundwater of any state in the country. Originally developed here, the center pivot is the iconic image of groundwater use. The deepest portion of the vast Ogallala Aquifer is below the Nebraska Sandhills, providing water for large scale ranching operations.</p>
 				</div>
-	<!-- 
-			<div class="col-sm-1 visible-sm" id="switch-container">
-					<p>Toggle: </p>
-				</div>
-				<div class="col-sm-8 visible-sm" id="switch-container">
-					<span id="counties-toggle" class="switch on">Counties</span>
-					<span id="streams-toggle" class="switch">Streams</span>
-					<!~~<span id="surfaceWater-toggle" class="switch">Surface Water Canals</span>~~>
-				</div>
- -->
 			</div>
 			
 			<div class="row">
@@ -76,14 +94,14 @@
 			</div>
 			
 			<div class="row row-shift-up">
-				<div class="col-sm-3 column-left-map">
+				<div class="col-sm-3 col-xs-6 column-left-map">
 					<p class="results">*Total Number of Wells: <b id="total-wells"></b></p>
 					<p class="results">Irrigation Wells: <b id="total-irri"></b></p>
 					<p class="results">**Domestic Wells: <b id="total-domestic"></b></p>
 					<p class="results">Livestock Wells: <b id="total-livestock"></b></p>
 				</div>
 				
-				<div class="col-sm-9 bars-container column-under-map">
+				<div class="col-sm-9 col-xs-6 bars-container column-under-map">
 					<div id="wells-bar-graph" class="bar"></div>
 					<div id="irri-bar-graph" class="bar"></div>
 					<div id="domestic-bar-graph" class="bar"></div>
@@ -92,16 +110,16 @@
 			</div>
 			
 			<div class="row row-shift-up">
-				<div class="col-sm-3 col-xs-2 column-left-map" id="switch-container">
+				<div class="col-sm-3 visible-lg visible-md visible-sm column-left-map" id="switch-container">
 					<p>Toggle: </p>
 				</div>
-				<div class="col-sm-2 col-xs-5" id="switch-container">
+				<div class="col-sm-3 visible-lg visible-md visible-sm" id="switch-container">
 					<span id="counties-toggle" class="switch on">Counties</span>
 					<span id="streams-toggle" class="switch">Streams</span>
 					<!--<span id="surfaceWater-toggle" class="switch">Surface Water Canals</span>-->
 				</div>
 				
-				<div class="col-sm-7 col-xs-12">
+				<div class="col-md-6 col-sm-12">
 					<footer>
 						<p>* Registered well data is sparse through the first half of the 20th century</p>
 						<p>** Domestic wells did not need to be registered until September 9th 1993</p>
@@ -112,10 +130,41 @@
 			</div>
 		
 		</div>
+		
+		<div class="container-fluid" style="background-color: lightgray;">
+			<div style="max-width: 620px; margin: 100px auto; font-size: 18px;">
+			
+				<h1>Some Title Here</h1>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus est, lacinia in lorem aliquam, egestas rhoncus erat. Nulla varius ac nisl vitae porttitor. Maecenas fermentum volutpat massa vel eleifend. Maecenas vulputate, purus quis aliquam dignissim, ligula nisi sodales felis, ut ultrices metus libero eu sem. Integer interdum, ante ac consectetur pretium, eros ipsum elementum quam, et elementum sapien lectus quis urna. Quisque a est non urna ultrices fringilla. Suspendisse a quam interdum, varius leo at, ultricies dolor. Proin mollis faucibus risus, ac mattis elit pharetra et.</p>
 
+				<p>Proin volutpat elit magna, in laoreet arcu interdum eu. Donec auctor risus consectetur, tempus ante non, ultrices risus. Etiam eu sollicitudin nunc, sed ornare justo. Nullam sed urna scelerisque, pretium dolor tincidunt, auctor velit. Phasellus feugiat sem in dui rutrum volutpat. Pellentesque dignissim iaculis mi, eget viverra velit pellentesque et. Fusce ac nisi turpis. Suspendisse non nunc malesuada, elementum dui sit amet, condimentum eros. Integer sagittis ultricies nisl, ac dapibus neque elementum eget. Nam convallis risus id eros aliquam, et tempus neque iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus quis adipiscing nibh, sed viverra nibh. Duis sagittis venenatis mi quis malesuada.</p>
+
+				<p>Maecenas blandit gravida mi, ut mattis tellus volutpat a. Quisque sed mi id lectus commodo mattis non non nisi. Praesent sodales ipsum nisl, nec suscipit leo sagittis et. Integer eget consectetur eros. In nec elementum dolor. Donec dapibus enim a aliquam faucibus. Donec ornare aliquet leo sit amet auctor. Aenean placerat elit non diam porttitor, et sagittis diam ullamcorper. Mauris convallis ante sit amet sem volutpat pharetra.</p>
+
+				<p>Maecenas blandit gravida mi, ut mattis tellus volutpat a. Quisque sed mi id lectus commodo mattis non non nisi. Praesent sodales ipsum nisl, nec suscipit leo sagittis et. Integer eget consectetur eros. In nec elementum dolor. Donec dapibus enim a aliquam faucibus. Donec ornare aliquet leo sit amet auctor. Aenean placerat elit non diam porttitor, et sagittis diam ullamcorper. Mauris convallis ante sit amet sem volutpat pharetra.</p>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 new-wells-container">
+				</div>
+			</div>
+		</div>
 <!-- 
-		<div id="data-container">
-			<div id="well-graph" style="width: 610px; height: 300px; margin: 0 auto"></div>
+
+		<div class="container-fluid video-container">
+			<div class="row">
+				<div class="col-xs-12">
+				
+					<video control autoplay loop poster="video/stock_tank_poster.jpg" id="bgvid">
+						<source src="video/stock_tank_fill.mp4" type="video/mp4">
+					</video>
+				</div>
+				
+				
+			</div>
 		</div>
  -->
 
@@ -127,18 +176,28 @@
 					var h = (getWidth() / 2) - 10;
 					$( "#map-container" ).css( "height", h );
 				}
+				
+				setLeadFormatting();
 			});
 			
 			$(window).resize(function(){	
-				
 				if ( getWidth() < 767 ) {
-					var h = (getWidth() / 2) - 10;
+					var h = (getWidth() / 2) - 40;
 					$( "#map-container" ).css( "height", h );
 				}
+				
+				setLeadFormatting();
 			});
  			
  			function getWidth() {
  				return $(window).width();
+ 			};
+ 			
+ 			function setLeadFormatting() {
+ 				var h = $(window).height();
+ 				$('.lead-image').height(h);
+ 				$('.second-image').height(h);
+  				$('.lead-scroll-container').css('left', $(window).width() / 2)
  			};
  			
  		
@@ -172,7 +231,9 @@
 				}else if ($(".container").css("width") == "750px") {
 					d = 378;
 				}else if ($(".container").css("width") < "750px") {
-					d = getWidth();
+					d = $('.bars-container').width() * 11;
+					$('#streams').addClass('active');
+					$('#counties').addClass('active');
 				}
 			}
 			
@@ -233,57 +294,97 @@
 				});
 			}
 		</script>   
-<!-- 
-	
-		<script type="text/javascript">
-			$(function () {
-				$('#well-graph').highcharts({
-					title: {
-						text: 'New Irrigation Wells in Nebraska',
-						x: -20 //center
-					},
-					xAxis: {
-						categories: [
-							'1930', '1931', '1932', '1933', '1934', '1935', '1936', '1937', '1938', '1939',
-							'1940', '1941', '1942', '1943', '1944', '1945', '1946', '1947', '1948', '1949',
-							'1950', '1951', '1952', '1953', '1954', '1955', '1956', '1957', '1958', '1959',
-							'1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969',
-							'1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977', '1978', '1979',
-							'1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989',
-							'1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
-							'2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009',
-							'2010', '2011', '2012', '2013', '2014'],
-						tickInterval: 10
-					},
-					yAxis: {
-						title: {
-							text: 'New Wells'
-						},
-						min: 0
-					},
-					tooltip: {
-						valueSuffix: ''
-					},
-					legend: {
-						layout: 'vertical',
-						align: 'right',
-						verticalAlign: 'middle',
-						borderWidth: 0
-					},
-					plotOptions: {
-						line: {
-							marker: {
-								symbol: 'circle'
-							}
-						}
-					},
-					series: [{
-						name: 'Wells',
-						data: [70, 23, 58, 45, 112, 158, 174, 257, 288, 263, 581, 470, 380, 322, 437, 370, 573, 654, 781, 397, 560, 300, 448, 1095, 2218, 3133, 5017, 3557, 555, 635, 658, 696, 440, 780, 1347, 1615, 1899, 2427, 2151, 1643, 2110, 2455, 2347, 2446, 3650, 4742, 6463, 4518, 1823, 2380, 2312, 2703, 940, 664, 744, 437, 306, 307, 787, 1347, 1240, 1017, 1066, 535, 667, 894, 1325, 1315, 1137, 703, 983, 1162, 1662, 2249, 2363, 1976, 1171, 1083, 1007, 729, 815, 1188, 1733, 2052, 1]
-					}]
-				});
+		
+		<script type="text/javascript" src="js/skrollr.min.js"></script>
+    	<script type="text/javascript">
+    		var s = skrollr.init();
+    	</script>
+    	<script type="text/javascript" src="js/d3.min.js"></script>
+    	
+    	
+		<script>
+
+			var margin = {top: 20, right: 20, bottom: 30, left: 50},
+				width = 1170 - margin.left - margin.right,
+				height = 500 - margin.top - margin.bottom;
+
+//  			var parseDate = d3.time.format("%y").parse;
+
+			var x = d3.time.scale()
+				.range([0, width]);
+
+			var y = d3.scale.linear()
+				.range([height, 0]);
+
+			var xAxis = d3.svg.axis()
+				.scale(x)
+				.orient("bottom")
+				.tickFormat(d3.time.format("%Y"));
+
+			var yAxis = d3.svg.axis()
+				.scale(y)
+				.orient("left");
+
+			var line = d3.svg.line()
+				.x(function(d) { return x(d.date); })
+				.y(function(d) { return y(d.wells); });
+
+			var svg = d3.select(".new-wells-container").append("svg")
+				.attr("width", width + margin.left + margin.right)
+				.attr("height", height + margin.top + margin.bottom)
+			  .append("g")
+				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				
+			svg.selectAll("line.y")
+				.data(y.ticks(4))
+				.enter().append("line")
+				.attr("class", "y")
+				.attr("x1", 0)
+				.attr("x2", width)
+				.attr("y1", y)
+				.attr("y2", y)
+				.style("opacity", ".6")
+				.style("stroke", "#ccc")
+			
+
+			d3.tsv("data/new-wells.tsv", function(error, data) {
+			  	data.forEach(function(d) {
+  				 	d.date = +d.date;
+				 	d.wells = +d.wells;
+			  	});
+
+			  	x.domain(d3.extent(data, function(d) { return d.date; }));
+// 			  	y.domain(d3.extent(data, function(d) { return d.wells; }));
+				y.domain([0,7000]);
+
+			  	svg.append("g")
+				  	.attr("class", "x axis")
+				  	.attr("transform", "translate(0," + height + ")")
+				  	.call(xAxis);
+
+ 			  	svg.append("g")
+ 				  	.attr("class", "y axis")
+ 				  	.call(yAxis);
+				  	
+// 				svg.selectAll(".y")
+// 					.append("text")
+// 					.style("text-anchor", "start")
+// 					.text(d);
+
+			  	svg.append("path")
+				  	.datum(data)
+				  	.attr("class", "new-wells-line")
+				  	.attr("d", line)
+				  	.on("mousemove", makeToolTip)
+				  	.append("title");
+				  	
+				function makeToolTip() {
+					var m = d3.mouse(this);
+					d3.select(".new-wells-line").select("title").text(m[1]);
+				
+				}
 			});
-		</script> 
- -->
+
+		</script>
 	</body>
 </html>
