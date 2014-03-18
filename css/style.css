@@ -92,6 +92,10 @@ body {
 	-webkit-text-shadow: 1px 1px 4px #424242;
 }
 
+.new-wells {
+	margin: 60px auto;
+}
+
 /* D3 graph styles */
 
 .axis path,
