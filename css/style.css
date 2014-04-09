@@ -1,12 +1,12 @@
 html {
-	background-color: #FDFDFD;
+	background-color: #fff;
 	font-size: 14px;
 }
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: black;
-	background-color: #FDFDFD;
+	background-color: #fff;
 }
 
 /* Page Formatting */
@@ -19,7 +19,7 @@ body {
 .interactive-map-div {
 	position: relative;
 	z-index; 10;
-	top: -300px;
+/*	top: -300px;*/
 	padding: 0px;
 }
 
