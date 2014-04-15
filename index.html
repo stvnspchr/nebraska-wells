@@ -14,6 +14,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    
 
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
@@ -21,6 +22,7 @@
 
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,13 +36,12 @@
 <body>
     <div class="lead-div container-fluid" data-top="opacity:1;transform: translateY(0px)" data--400-top="opacity:0;transform: translateY(-400px)">
         <div class="row">
-            <div class="col-xs-12 lead-image">
-                <div class="lead-container">
-                    <h1 class="lead-title lead-shadow">Nebraska Groundwater</h1>
-                    <p class="lead-copy lead-shadow">A timelapse of groundwater well production in the heart of the Great Plains</p>
-                    <p class="lead-author lead-shadow">By the PBT Team</p>
-                    <p class="lead-date lead-shadow">August 22nd 2014</p>
-
+            <div class="col-xs-12" id="lead-image">
+                <div id="lead-container">
+                    <h1 id="lead-title" class="lead-shadow">Nebraska Groundwater</h1>
+                    <p id="lead-copy" class="lead-shadow">A timelapse of groundwater well production in the heart of the Great Plains</p>
+                    <p id="lead-author" class="lead-shadow">By the PBT Team</p>
+                    <p id="lead-date" class="lead-shadow">August 22nd 2014</p>
                 </div>
                 <div class="lead-scroll-container">
                     <p class="lead-scroll lead-shadow">SCROLL</p>
@@ -53,10 +54,12 @@
     </div>
     
     <div class="container-fluid">
-        <div class="row" style="position: relative; max-width: 500px; margin: 0 auto; font-size: 18px; top:-250px;">
+        <div class="body-copy" style="position: relative; top:-250px;">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus est, lacinia in lorem aliquam, egestas rhoncus erat. Nulla varius ac nisl vitae porttitor. Maecenas fermentum volutpat massa vel eleifend. Maecenas vulputate, purus quis aliquam dignissim, ligula nisi sodales felis, ut ultrices metus libero eu sem. Integer interdum, ante ac consectetur pretium, eros ipsum elementum quam, et elementum sapien lectus quis urna. Quisque a est non urna ultrices fringilla. Suspendisse a quam interdum, varius leo at, ultricies dolor. Proin mollis faucibus risus, ac mattis elit pharetra et.</p>
 
             <p>Proin volutpat elit magna, in laoreet arcu interdum eu. Donec auctor risus consectetur, tempus ante non, ultrices risus. Etiam eu sollicitudin nunc, sed ornare justo. Nullam sed urna scelerisque, pretium dolor tincidunt, auctor velit. Phasellus feugiat sem in dui rutrum volutpat. Pellentesque dignissim iaculis mi, eget viverra velit pellentesque et. Fusce ac nisi turpis. Suspendisse non nunc malesuada, elementum dui sit amet, condimentum eros. Integer sagittis ultricies nisl, ac dapibus neque elementum eget. Nam convallis risus id eros aliquam, et tempus neque iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus quis adipiscing nibh, sed viverra nibh. Duis sagittis venenatis mi quis malesuada.</p>
+                
+            <div class="insert"><iframe id="sandhills-well-timelapse" src="//player.vimeo.com/video/83797473?api=1&player_id=vimeoplayer&title=0&amp;byline=0&amp;portrait=0" width="540" height="360" frameborder="0"></iframe></div>
 
             <p>Maecenas blandit gravida mi, ut mattis tellus volutpat a. Quisque sed mi id lectus commodo mattis non non nisi. Praesent sodales ipsum nisl, nec suscipit leo sagittis et. Integer eget consectetur eros. In nec elementum dolor. Donec dapibus enim a aliquam faucibus. Donec ornare aliquet leo sit amet auctor. Aenean placerat elit non diam porttitor, et sagittis diam ullamcorper. Mauris convallis ante sit amet sem volutpat pharetra.</p>
 
@@ -145,46 +148,35 @@
 
     </div>
 
-    <div class="container-fluid">
-        <div class="row" style="max-width: 500px; margin: 0 auto; font-size: 18px; margin-top: 250px;">
+    <div class="container container-new-wells">
+        <div class="body-copy" style="margin-top: 250px;">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus est, lacinia in lorem aliquam, egestas rhoncus erat. Nulla varius ac nisl vitae porttitor. Maecenas fermentum volutpat massa vel eleifend. Maecenas vulputate, purus quis aliquam dignissim, ligula nisi sodales felis, ut ultrices metus libero eu sem. Integer interdum, ante ac consectetur pretium, eros ipsum elementum quam, et elementum sapien lectus quis urna. Quisque a est non urna ultrices fringilla. Suspendisse a quam interdum, varius leo at, ultricies dolor. Proin mollis faucibus risus, ac mattis elit pharetra et.</p>
 
             <p>Proin volutpat elit magna, in laoreet arcu interdum eu. Donec auctor risus consectetur, tempus ante non, ultrices risus. Etiam eu sollicitudin nunc, sed ornare justo. Nullam sed urna scelerisque, pretium dolor tincidunt, auctor velit. Phasellus feugiat sem in dui rutrum volutpat. Pellentesque dignissim iaculis mi, eget viverra velit pellentesque et. Fusce ac nisi turpis. Suspendisse non nunc malesuada, elementum dui sit amet, condimentum eros. Integer sagittis ultricies nisl, ac dapibus neque elementum eget. Nam convallis risus id eros aliquam, et tempus neque iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus quis adipiscing nibh, sed viverra nibh. Duis sagittis venenatis mi quis malesuada.</p>
+            
+            
         </div>
         
+        
+        
+        <div class="new-wells-pop-ups" id="pop-up-1956">
+                <p>There were <b>5,600</b> new irrigation wells in 1956.</p>
+            </div>
+            <div class="new-wells-pop-ups" id="pop-up-1976">
+                <p>There were <b>6,800</b> new irrigation wells in 1976.</p>
+            </div>
         <div class="new-wells row">
-            <div class="col-xs-12 new-wells-container">
+            <h1>New Irrigation Wells 1930-2014</h1>
+            <div class="col-xs-12" id="new-wells-chart">
             </div>
-<!--
-            <div class="col-xs-2 new-wells-container">
-                <p>This is some sample text. anfavn wbnrw gaer gaeg ga erg aeggwgwrg; wrg.</p>
-            </div>
-            <button id="button">Plot Wells</button>
--->
         </div>
         
-        <div class="row" style="max-width: 500px; margin: 0 auto; font-size: 18px;">
+        <div class="body-copy">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus est, lacinia in lorem aliquam, egestas rhoncus erat. Nulla varius ac nisl vitae porttitor. Maecenas fermentum volutpat massa vel eleifend. Maecenas vulputate, purus quis aliquam dignissim, ligula nisi sodales felis, ut ultrices metus libero eu sem. Integer interdum, ante ac consectetur pretium, eros ipsum elementum quam, et elementum sapien lectus quis urna. Quisque a est non urna ultrices fringilla. Suspendisse a quam interdum, varius leo at, ultricies dolor. Proin mollis faucibus risus, ac mattis elit pharetra et.</p>
 
             <p>Proin volutpat elit magna, in laoreet arcu interdum eu. Donec auctor risus consectetur, tempus ante non, ultrices risus. Etiam eu sollicitudin nunc, sed ornare justo. Nullam sed urna scelerisque, pretium dolor tincidunt, auctor velit. Phasellus feugiat sem in dui rutrum volutpat. Pellentesque dignissim iaculis mi, eget viverra velit pellentesque et. Fusce ac nisi turpis. Suspendisse non nunc malesuada, elementum dui sit amet, condimentum eros. Integer sagittis ultricies nisl, ac dapibus neque elementum eget. Nam convallis risus id eros aliquam, et tempus neque iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus quis adipiscing nibh, sed viverra nibh. Duis sagittis venenatis mi quis malesuada.</p>
         </div>
     </div>
-    
-    <!-- 
-
-		<div class="container-fluid video-container">
-			<div class="row">
-				<div class="col-xs-12">
-				
-					<video control autoplay loop poster="video/stock_tank_poster.jpg" id="bgvid">
-						<source src="video/stock_tank_fill.mp4" type="video/mp4">
-					</video>
-				</div>
-				
-				
-			</div>
-		</div>
- -->
 
     <script>
         $('a.ui-slider-handle').draggable();
@@ -214,7 +206,7 @@
 
         function setLeadFormatting() {
             var h = $(window).height();
-            $('.lead-image').height(h);
+            $('#lead-image').height(h);
             $('.second-image').height(h);
             $('.lead-scroll-container').css('left', $(window).width() / 2)
         };
@@ -382,27 +374,25 @@
     <script type="text/javascript">
         var s = skrollr.init();
     </script>
-    <script type="text/javascript" src="js/d3.min.js"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
 
 
     <script>
+        /**
+         * Uses Highcharts API to create a minimalistic chart to show new irrigation wells between 1930 and 2014. 
+         */
+        
         $(function() {
-            $('.new-wells-container').highcharts({
+            $('#new-wells-chart').highcharts({
                 chart: {
                     plotBackgroundColor: 'white', //not needed
                     type: 'line',
                     showAxes: false
                 },
-                title: {
-                    text: null
-                },
+                title: {text: null},
                 exporting: false,
-                credits: {
-                    enabled: false
-                },
+                credits: {enabled: false},
                 xAxis: {
-                    categories: [1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
                     lineColor: 'transparent',
                     labels: {
                         enabled: false   
@@ -446,26 +436,50 @@
                         return '<b>' + this.y + '</b> new irrigation wells in <b>' + this.x + '</b>';
                     }
                 },
-                legend: {
-                    enabled: false
-                },
-                series: [{
-                    stickyTracking: {
-                        enabled: false
-                    }
-//                    ,
-//                    name: 'Wells',
-//                    data: [23,6,5,9,6,30,20,37,47,51,70,23,58,45,112,158,174,257,288,263,581,470,380,322,437,370,573,654,781,397,560,300,448,1095,2218,3133,5017,3557,555,635,658,696,440,780,1347,1615,1899,2427,2151,1643,2110,2455,2347,2446,3650,4742,6463,4518,1823,2380,2312,2703,940,664,744,437,306,307,787,1347,1240,1017,1066,535,667,894,1325,1315,1137,703,983,1162,1662,2249,2363,1976,1171,1083,1007,729,815,1188,1733,2052]
-                }]
+                legend: {enabled: false}
             });
         });
+        
+        /**
+         * Uses waypoints.min.js to determine when user scrolls to when #new-wells-chart is 50% visible.
+         * Fires events handlers that draws the highcharts line graph and fades in the pop-up tool tips.
+         */
 
-        $('.new-wells-container').waypoint(function() {
-            var chart = $('.new-wells-container').highcharts();
+        $('#new-wells-chart').waypoint(function() {
+            var chart = $('#new-wells-chart').highcharts();
             chart.addSeries({
                 data: [23, 6, 5, 9, 6, 30, 20, 37, 47, 51, 70, 23, 58, 45, 112, 158, 174, 257, 288, 263, 581, 470, 380, 322, 437, 370, 573, 654, 781, 397, 560, 300, 448, 1095, 2218, 3133, 5017, 3557, 555, 635, 658, 696, 440, 780, 1347, 1615, 1899, 2427, 2151, 1643, 2110, 2455, 2347, 2446, 3650, 4742, 6463, 4518, 1823, 2380, 2312, 2703, 940, 664, 744, 437, 306, 307, 787, 1347, 1240, 1017, 1066, 535, 667, 894, 1325, 1315, 1137, 703, 983, 1162, 1662, 2249, 2363, 1976, 1171, 1083, 1007, 729, 815, 1188, 1733, 2052]
-            })
+            });
+            chart.xAxis[0].setCategories([1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013]);
+            $('#pop-up-1956').delay( 1000 ).fadeIn("slow");
+            $('#pop-up-1976').delay( 1400 ).fadeIn("slow");
         },{offset: '50%'});
+
+        
+        /**
+         * Vimeo API
+         * Control play/pause with Waypoints jQuery
+         */
+        
+        var iframe = document.getElementById('sandhills-well-timelapse');
+
+        // $f == Froogaloop
+        var player = $f(iframe);
+        
+        //Play when iframe is in viewport
+        $('#sandhills-well-timelapse').waypoint(function() {
+            player.api("play");
+        },{offset: 'bottom-in-view'});
+        
+        //Pause when top of iframe is in viewport
+        $('#sandhills-well-timelapse').waypoint(function() {
+            player.api("pause");
+        });
+        
+        $(document).ready(function() {
+            var p = $("#sandhills-well-timelapse").contents().find(".play-button-cell");
+            alert(p);
+        });
 
     </script>
 </body>
